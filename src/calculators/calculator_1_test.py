@@ -26,5 +26,5 @@ def test_calculate_with_body_error():
     with raises(Exception) as excinfo:
         calculator_1.calculate(mock_request)
 
-    assert str(excinfo.value) == "Body badly written"
+    assert str(excinfo.value) == "Missing 'numbers' key in request body"
   

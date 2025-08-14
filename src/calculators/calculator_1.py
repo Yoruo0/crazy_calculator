@@ -15,7 +15,7 @@ class Calculator1():
 
     def __validate_body(self, body: Dict) -> float:
         if "number" not in body:
-            raise Exception("Body badly written")
+            raise Exception("Missing 'numbers' key in request body")
 
         input_data = body["number"]
         return input_data
