@@ -1,5 +1,5 @@
 import numpy
-from typing import List
+from typing import List, Union
 from .interfaces.driver_handler_interface import DriverHandlerInterface
 
 class NumpyHandler(DriverHandlerInterface):
@@ -11,3 +11,6 @@ class NumpyHandler(DriverHandlerInterface):
     
     def variance(self, numbers: List[float]) -> float:
         return self.__np.var(numbers) # type: ignore
+    
+    def average(self, numbers: List[Union[int, float]]) -> float:
+        return self.__np.average(numbers) # type: ignore
